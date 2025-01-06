@@ -1,0 +1,13 @@
+name: Check the self hosted runners
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  hello:
+    runs-on: self-hosted
+    steps:
+      - name: Hello
+        run: echo "Hello World"
+
