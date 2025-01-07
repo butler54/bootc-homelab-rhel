@@ -8,6 +8,7 @@ on:
 env:
   REGISTRY_USER: rh-ee-chbutler
   IMAGE_REGISTRY: quay.io
+  IMAGE: bootc-lab
 
 jobs:
   testbuild:
