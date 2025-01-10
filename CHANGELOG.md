@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.1.2 (2025-01-10)
+
+### Fix
+
+* fix: correct logvol groups (#4)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`c5745e7`](https://github.com/butler54/bootc-homelab-rhel/commit/c5745e72a82ac213247045fc1f9dfc17ed1547d2))
+
 ## v0.1.1 (2025-01-10)
 
 ### Chore
