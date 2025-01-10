@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.1.5 (2025-01-10)
+
+### Fix
+
+* fix: correct digest format (#7)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`255372e`](https://github.com/butler54/bootc-homelab-rhel/commit/255372e66c4dc6e9e5435458c633acd926a1baae))
+
 ## v0.1.4 (2025-01-10)
 
 ### Fix
