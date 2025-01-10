@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.1.3 (2025-01-10)
+
+### Fix
+
+* fix: clear up pipelines on reused cicd platform (#5)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`4c0376f`](https://github.com/butler54/bootc-homelab-rhel/commit/4c0376f97e0a7222bbbb38474bcaedaad05de12d))
+
 ## v0.1.2 (2025-01-10)
 
 ### Fix
