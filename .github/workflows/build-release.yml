@@ -43,6 +43,9 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }}
         registry: registry.redhat.io
 
+    - name: cleanup images before build and signing
+      run: |
+        podman rmi $(podman images localhost/${{ env.IMAGE }} -q)
     - name: Build Image
       id: build-image
       uses: redhat-actions/buildah-build@v2
@@ -55,8 +58,7 @@ jobs:
     - name: Install Cosign
       uses: sigstore/cosign-installer@v3.7.0
     
-    - name: Get image sha
-      id: imagesha
+    - name: push to registry
       uses: redhat-actions/push-to-registry@v2
       with:
         image: ${{ env.IMAGE }}
@@ -64,4 +66,4 @@ jobs:
         registry: quay.io/${{ env.REGISTRY_USER }}
 
     - name: Sign image
-      run: cosign sign  --yes -a sha=${{ github.sha }} -a run_id=${{github.run_id}} -a run_attempt="$GITHUB_RUN_ATTEMPT" quay.io/${{ env.REGISTRY_USER }}/${{ env.IMAGE }}:`podman image inspect --format '{{ .Digest }}' quay.io/${{ env.REGISTRY_USER }}/${{ env.IMAGE }}`
+      run: cosign sign  --yes -a sha=${{ github.sha }} -a run_id=${{github.run_id}} -a run_attempt="$GITHUB_RUN_ATTEMPT" quay.io/${{ env.REGISTRY_USER }}/${{ env.IMAGE }}:`podman image inspect --format '{{ .Digest }}' localhost/${{ env.IMAGE }}`
