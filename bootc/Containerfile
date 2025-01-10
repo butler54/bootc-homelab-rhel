@@ -1,3 +1,10 @@
 FROM registry.redhat.io/rhel9/rhel-bootc:latest
 
-RUN dnf -y install wget && dnf clean all
+RUN dnf -y install wget \
+    cockpit* \
+    podman \
+    buildah \
+    skopeo \
+    qemu-kvm \
+    libvirt \
+    && dnf clean all
