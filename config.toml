@@ -5,24 +5,33 @@
 [customizations.installer.kickstart]
 contents = """
 text --non-interactive
-network --bootproto=dhcp --device=link --activate --onboot=on
+network --bootproto=dhcp --device=link --activate --onboot=on --hostname=lab
 zerombr
 # For the command below it is critical to specify the disk otherwise it will erase ALL disks attached to the system
-clearpart --drives=nvme0n1 --all --initlabel --disklabel=gpt
-reqpart --add-boot
-#autopart --noswap --type=lvm
+clearpart --all --initlabel --disklabel=gpt
 
 # Disk partitioning information
 # https://developers.redhat.com/articles/2024/08/20/bare-metal-deployments-image-mode-rhel?source=sso#example_kickstart
-part pv.01 --size=40208 --grow --ondisk=nvme0n1
-volgroup vg_fedora pv.01
-logvol / --vgname=vg_fedora --size=25200 --name=lv_root --fstype=xfs
-logvol /var --vgname=vg_fedora --size=10240 --name=lv_var --fstype=xfs
-logvol /var/log --vgname=vg_fedora --size=10240 --name=lv_varlog --fstype=xfs
-logvol /var/home --vgname=vg_fedora --size=20480 --name=lv_home --fstype=xfs
-logvol /var/lib/containers/storage --vgname=vg_fedora --size=10240 --name=lv_root_containers --fstype=xfs
-logvol /mnt/containers/storage --vgname=vg_fedora --size=10240 --name=lv_user_containers --fstype=xfs
-logvol /var/lib/libvirt/vm-pool --vgname=vg_fedora --size=204800 --name=lv_vm_pool --fstype=xfs
+part /boot --fstype="xfs" --size=500 --ondisk=sdb
+part pv.01 --grow --ondisk=sdb
+part pv.02 --grow --ondisk=sdd
+part raid.1 --grow --ondrive=sda
+part raid.2 --grow --ondrive=sdc
+
+volgroup vg_rhel pv.01
+volgroup vg_rhel pv.02
+logvol
+# Sizes are in MB
+logvol / --vgname=vg_rhel --size=40960 --name=lv_root --fstype=xfs
+logvol /var --vgname=vg_rhel --size=10240 --name=lv_var --fstype=xfs
+logvol /tmp --vgname=vg_rhel --size=10240 --name=lv_var --fstype=xfs
+logvol /var/log --vgname=vg_rhel --size=10240 --name=lv_varlog --fstype=xfs
+logvol /var/log/audit --vgname=vg_rhel --size=10240 --name=lv_varlog --fstype=xfs
+logvol /var/home --vgname=vg_rhel --size=20480 --name=lv_home --fstype=xfs
+
+raid /var/data --fstype=xfs --device=data --level=RAID1 raid.1 raid.2
+
+
 
 # https://docs.fedoraproject.org/en-US/fedora/f36/install-guide/appendixes/Kickstart_Syntax_Reference/#sect-kickstart-commands-users-groups
 # Generate an ssh key using the command `openssl passwd -6`
