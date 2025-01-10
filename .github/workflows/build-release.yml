@@ -45,7 +45,7 @@ jobs:
 
     - name: cleanup images before build and signing
       run: |
-        podman rmi $(podman images localhost/${{ env.IMAGE }} -q)
+        podman rmi -f $(podman images localhost/${{ env.IMAGE }} -q)
     - name: Build Image
       id: build-image
       uses: redhat-actions/buildah-build@v2
