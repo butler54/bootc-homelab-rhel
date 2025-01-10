@@ -1,5 +1,29 @@
 # CHANGELOG
 
+## v0.1.1 (2025-01-10)
+
+### Chore
+
+* chore: toml validation (#2)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`bd539d6`](https://github.com/butler54/bootc-homelab-rhel/commit/bd539d6e99fdba08707b98a1d880452ea24ea54a))
+
+### Fix
+
+* fix: configtoml (#3)
+
+* fix: add config.toml
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: baseline
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+---------
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`0a9db44`](https://github.com/butler54/bootc-homelab-rhel/commit/0a9db44e62ae87986a67bf25d9b2195bc46fbcae))
+
 ## v0.1.0 (2025-01-07)
 
 ### Chore
