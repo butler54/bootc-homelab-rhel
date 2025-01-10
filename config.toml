@@ -18,18 +18,16 @@ part pv.02 --grow --ondisk=sdd
 part raid.1 --grow --ondrive=sda
 part raid.2 --grow --ondrive=sdc
 
-volgroup vg_rhel pv.01
-volgroup vg_rhel pv.02
-logvol
+volgroup vg_rhel pv.01 pv.02
 # Sizes are in MB
 logvol / --vgname=vg_rhel --size=40960 --name=lv_root --fstype=xfs
 logvol /var --vgname=vg_rhel --size=10240 --name=lv_var --fstype=xfs
-logvol /tmp --vgname=vg_rhel --size=10240 --name=lv_var --fstype=xfs
+logvol /tmp --vgname=vg_rhel --size=10240 --name=lv_tmp --fstype=xfs
 logvol /var/log --vgname=vg_rhel --size=10240 --name=lv_varlog --fstype=xfs
-logvol /var/log/audit --vgname=vg_rhel --size=10240 --name=lv_varlog --fstype=xfs
+logvol /var/log/audit --vgname=vg_rhel --size=10240 --name=lv_varlogaudit --fstype=xfs
 logvol /var/home --vgname=vg_rhel --size=20480 --name=lv_home --fstype=xfs
-
-raid /var/data --fstype=xfs --device=data --level=RAID1 raid.1 raid.2
+logvol /var/lib/libvirt/vm-pool --vgname=vg_rhel --size=100000 --name=lv_vm_pool --fstype=xfs --grow
+raid /var/data --fstype xfs --device data --level=RAID1 raid.1 raid.2
 
 
 
