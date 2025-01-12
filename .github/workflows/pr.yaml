@@ -43,4 +43,4 @@ jobs:
         image: "${{ env.IMAGE }}"
         tags: latest ${{ github.sha }}
         containerfiles: |
-         ./bootc/Containerfile
+         ./Containerfile

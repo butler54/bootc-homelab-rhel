@@ -53,7 +53,7 @@ jobs:
         image: "${{ env.IMAGE }}"
         tags: latest prod ${{ steps.parse_version.outputs.VERSION }} ${{ github.sha }}
         containerfiles: |
-          ./bootc/Containerfile
+          ./Containerfile
   
     - name: Install Cosign
       uses: sigstore/cosign-installer@v3.7.0
