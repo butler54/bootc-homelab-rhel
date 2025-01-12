@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.1.6 (2025-01-12)
+
+### Fix
+
+* fix: segregate quay.io and registry.redhat.io creds (#9)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`0ab8d57`](https://github.com/butler54/bootc-homelab-rhel/commit/0ab8d57e2f091f7d02776c0da496ac6b8edcaa41))
+
 ## v0.1.5 (2025-01-10)
 
 ### Fix
