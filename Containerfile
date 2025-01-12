@@ -11,10 +11,10 @@ RUN dnf -y install wget \
     skopeo \
     qemu-kvm \
     libvirt \
-    screen \
     openssh-server \
     git \
-    lm_sensors
+    lm_sensors \ 
+    tmux
 
 ADD files/sudoers.d/wheel-passwordless-sudo /etc/sudoers.d/
 ADD files/chrony.conf /etc/
