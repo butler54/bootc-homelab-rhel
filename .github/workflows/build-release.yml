@@ -39,8 +39,8 @@ jobs:
     - name: Log in to registry.redhat.io
       uses: redhat-actions/podman-login@v1
       with:
-        username: ${{ env.REGISTRY_USER }}
-        password: ${{ secrets.REGISTRY_PASSWORD }}
+        username: ${{ secrets.RH_REGISTRY_USER }} # service account
+        password: ${{ secrets.RH_REGISTRY_PASSWORD }} # service accounts
         registry: registry.redhat.io
 
     - name: cleanup images before build and signing
