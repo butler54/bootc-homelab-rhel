@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## v0.1.7 (2025-01-12)
+
+### Fix
+
+* fix: cleanup and update (#8)
+
+* fix: cleanup and update
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* feat: Add nmconnection files
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: remove screen and add tmux
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+---------
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`353ca43`](https://github.com/butler54/bootc-homelab-rhel/commit/353ca4315c812ae89db5f21445351ea89515b55a))
+
 ## v0.1.6 (2025-01-12)
 
 ### Fix
