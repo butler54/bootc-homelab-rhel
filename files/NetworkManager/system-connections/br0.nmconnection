@@ -1,0 +1,14 @@
+[connection]
+id=br0
+uuid=5d4c08c5-b324-409c-ba64-6b5e28201125
+type=bridge
+autoconnect=true
+
+[bridge]
+stp=false
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=ignore

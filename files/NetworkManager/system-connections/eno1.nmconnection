@@ -1,0 +1,13 @@
+[connection]
+id=eno1
+uuid=dd3bb7a1-a502-449d-9f9c-eaa810d5af86
+type=ethernet
+autoconnect=true
+slave-type=bridge
+master=br0
+
+[ipv4]
+method=disabled
+
+[ipv6]
+method=ignore
