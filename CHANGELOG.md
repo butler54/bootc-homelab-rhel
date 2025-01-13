@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.1.10 (2025-01-13)
+
+### Fix
+
+* fix: revert to using tag (#12)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`28bdbb8`](https://github.com/butler54/bootc-homelab-rhel/commit/28bdbb8dcb90353ffead8dcc1b90ddc27a3a150a))
+
 ## v0.1.9 (2025-01-13)
 
 ### Fix
