@@ -18,10 +18,10 @@ RUN dnf -y install wget \
 
 ADD files/sudoers.d/wheel-passwordless-sudo /etc/sudoers.d/
 ADD files/chrony.conf /etc/
-ADD files/NetworkManager/system-connections/br0.nmconnection /etc/NetworkManager/system-connections/
-ADD files/NetworkManager/system-connections/eno1.nmconnection /etc/NetworkManager/system-connections/
-RUN chmod 600 /etc/NetworkManager/system-connections/br0.nmconnection
-RUN chmod 600 /etc/NetworkManager/system-connections/eno1.nmconnection
+# ADD files/NetworkManager/system-connections/br0.nmconnection /etc/NetworkManager/system-connections/
+# ADD files/NetworkManager/system-connections/eno1.nmconnection /etc/NetworkManager/system-connections/
+# RUN chmod 600 /etc/NetworkManager/system-connections/br0.nmconnection
+# RUN chmod 600 /etc/NetworkManager/system-connections/eno1.nmconnection
 
 
 RUN mkdir -p -m 777 /var/mnt/vms
