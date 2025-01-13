@@ -66,4 +66,4 @@ jobs:
         registry: quay.io/${{ env.REGISTRY_USER }}
 
     - name: Sign image
-      run: cosign sign  --yes -a sha=${{ github.sha }} -a run_id=${{github.run_id}} -a run_attempt="$GITHUB_RUN_ATTEMPT" quay.io/${{ env.REGISTRY_USER }}/${{ env.IMAGE }}@`podman image inspect --format '{{ .Digest }}' localhost/${{ env.IMAGE }}`
+      run: cosign sign  --yes -a tag=${{ steps.parse_version.outputs.VERSION }} tag=prod -a tag=latest -a tag=${{ github.sha }} -a sha=${{ github.sha }} -a run_id=${{github.run_id}} -a run_attempt="$GITHUB_RUN_ATTEMPT" quay.io/${{ env.REGISTRY_USER }}/${{ env.IMAGE }}@`podman image inspect --format '{{ .Digest }}' localhost/${{ env.IMAGE }}`
