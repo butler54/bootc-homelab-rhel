@@ -1,0 +1,11 @@
+[connection]
+id=bridge-br0
+uuid=b29d0789-585a-4b40-a7d3-85bcd1787e76
+type=ethernet
+controller=br0
+interface-name=eno1
+port-type=bridge
+
+[ethernet]
+
+[bridge-port]

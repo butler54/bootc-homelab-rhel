@@ -1,0 +1,16 @@
+[connection]
+id=eno1
+uuid=3938c6da-8b57-4fc3-8ad5-a49b434cdf43
+type=ethernet
+interface-name=eno1
+
+[ethernet]
+
+[ipv4]
+method=auto
+
+[ipv6]
+addr-gen-mode=eui64
+method=auto
+
+[proxy]
