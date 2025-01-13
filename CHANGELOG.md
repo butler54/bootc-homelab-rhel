@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.1.12 (2025-01-13)
+
+### Fix
+
+* fix: reenable networking (#14)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`d4876ec`](https://github.com/butler54/bootc-homelab-rhel/commit/d4876ec8474db41815b64aefe191575e51054b0f))
+
 ## v0.1.11 (2025-01-13)
 
 ### Fix
