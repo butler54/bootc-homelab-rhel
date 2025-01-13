@@ -1,6 +1,6 @@
 [connection]
 id=eno1
-uuid=dd3bb7a1-a502-449d-9f9c-eaa810d5af86
+uuid=3938c6da-8b57-4fc3-8ad5-a49b434cdf43
 type=ethernet
 autoconnect=true
 slave-type=bridge
