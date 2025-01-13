@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.1.11 (2025-01-13)
+
+### Fix
+
+* fix: remove netconf (#13)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`343e8d9`](https://github.com/butler54/bootc-homelab-rhel/commit/343e8d933515dd5ee8f8fb0a0d7e71e658d9aa5b))
+
 ## v0.1.10 (2025-01-13)
 
 ### Fix
