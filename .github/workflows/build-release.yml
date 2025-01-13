@@ -45,12 +45,12 @@ jobs:
 
     - name: cleanup images before build and signing
       run: |
-        podman rmi -f $(podman images localhost/${{ env.IMAGE }} -q)
+        podman rmi -f $(podman images quay.io/${{ env.REGISTRY_USER }}/${{ env.IMAGE }} -q)
     - name: Build Image
       id: build-image
       uses: redhat-actions/buildah-build@v2
       with:
-        image: "${{ env.IMAGE }}"
+        image: "quay.io/${{ env.REGISTRY_USER }}/${{ env.IMAGE }}"
         tags: latest prod ${{ steps.parse_version.outputs.VERSION }} ${{ github.sha }}
         containerfiles: |
           ./Containerfile
@@ -66,8 +66,8 @@ jobs:
         registry: quay.io/${{ env.REGISTRY_USER }}
     
     - name: what would we sign
-      run: podman image inspect --format '{{ .Digest }}' localhost/${{ env.IMAGE }}
+      run: podman image inspect --format '{{ .Digest }}' quay.io/${{ env.REGISTRY_USER }}/${{ env.IMAGE }}
       
     - name: Sign image
-      #run: cosign sign  --yes -a tag=${{ steps.parse_version.outputs.VERSION }} -a tag=prod -a tag=latest -a tag=${{ github.sha }} -a sha=${{ github.sha }} -a run_id=${{github.run_id}} -a run_attempt="$GITHUB_RUN_ATTEMPT" quay.io/${{ env.REGISTRY_USER }}/${{ env.IMAGE }}@`podman image inspect --format '{{ .Digest }}' localhost/${{ env.IMAGE }}`
-      run: cosign sign  --yes -a tag=${{ steps.parse_version.outputs.VERSION }} -a tag=prod -a tag=latest -a tag=${{ github.sha }} -a sha=${{ github.sha }} -a run_id=${{github.run_id}} -a run_attempt="$GITHUB_RUN_ATTEMPT" quay.io/${{ env.REGISTRY_USER }}/${{ env.IMAGE }}:prod
+      run: cosign sign  --yes -a tag=${{ steps.parse_version.outputs.VERSION }} -a tag=prod -a tag=latest -a tag=${{ github.sha }} -a sha=${{ github.sha }} -a run_id=${{github.run_id}} -a run_attempt="$GITHUB_RUN_ATTEMPT" quay.io/${{ env.REGISTRY_USER }}/${{ env.IMAGE }}@`podman image inspect --format '{{ .Digest }}' quay.io/${{ env.REGISTRY_USER }}/${{ env.IMAGE }}`
+      #run: cosign sign  --yes -a tag=${{ steps.parse_version.outputs.VERSION }} -a tag=prod -a tag=latest -a tag=${{ github.sha }} -a sha=${{ github.sha }} -a run_id=${{github.run_id}} -a run_attempt="$GITHUB_RUN_ATTEMPT" quay.io/${{ env.REGISTRY_USER }}/${{ env.IMAGE }}:prod
