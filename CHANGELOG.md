@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.1.9 (2025-01-13)
+
+### Fix
+
+* fix: correct missing flag (#11)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`20511a6`](https://github.com/butler54/bootc-homelab-rhel/commit/20511a602d6a25da409a91e2d1f01df1b111d1ef))
+
 ## v0.1.8 (2025-01-13)
 
 ### Fix
