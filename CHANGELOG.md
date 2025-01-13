@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.1.8 (2025-01-13)
+
+### Fix
+
+* fix: Sign the releases (#10)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`8e69537`](https://github.com/butler54/bootc-homelab-rhel/commit/8e69537cb448ebfbc44541e6c4eabb7c62003867))
+
 ## v0.1.7 (2025-01-12)
 
 ### Fix
