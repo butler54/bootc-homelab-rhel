@@ -1,0 +1,17 @@
+[connection]
+id=enp1s0
+uuid=785b24c7-8838-453f-9f1f-a24676822659
+type=ethernet
+autoconnect=false
+interface-name=enp1s0
+
+[ethernet]
+
+[ipv4]
+method=auto
+
+[ipv6]
+addr-gen-mode=eui64
+method=auto
+
+[proxy]
