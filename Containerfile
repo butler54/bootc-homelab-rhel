@@ -10,7 +10,12 @@ RUN dnf -y install wget \
     buildah \
     skopeo \
     qemu-kvm \
+    qemu-kvm-tools \
+    qemu-img \
     libvirt \
+    libvirt-client \
+    virt-who \
+    virt-top \
     openssh-server \
     git \
     lm_sensors \ 
