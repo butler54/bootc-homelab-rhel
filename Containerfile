@@ -1,5 +1,7 @@
 FROM registry.redhat.io/rhel9/rhel-bootc:latest
 
+RUN dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/9/tailscale.repo
+
 RUN dnf update -y
 
 RUN dnf -y install wget \
@@ -19,7 +21,11 @@ RUN dnf -y install wget \
     openssh-server \
     git \
     lm_sensors \ 
-    tmux
+    tmux \
+    tailscale 
+
+RUN dnf group install -y "Virtualization Host"
+
 
 ADD files/sudoers.d/wheel-passwordless-sudo /etc/sudoers.d/
 ADD files/chrony.conf /etc/
@@ -28,6 +34,8 @@ ADD files/chrony.conf /etc/
 # RUN chmod 600 /etc/NetworkManager/system-connections/br0.nmconnection
 # RUN chmod 600 /etc/NetworkManager/system-connections/eno1.nmconnection
 
-
 RUN mkdir -p -m 777 /var/mnt/vms
+
+RUN sudo systemctl enable --now tailscaled
+
 
