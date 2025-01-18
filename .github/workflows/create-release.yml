@@ -30,10 +30,7 @@ jobs:
         username: ${{ secrets.RH_REGISTRY_USER }} # service account
         password: ${{ secrets.RH_REGISTRY_PASSWORD }} # service accounts
         registry: registry.redhat.io
-
-
     - name: Build Image
-      id: build-image
       uses: redhat-actions/buildah-build@v2
       with:
         image: ""quay.io/${{ env.REGISTRY_USER }}/${{ env.IMAGE }}"
