@@ -1,5 +1,47 @@
 # CHANGELOG
 
+## v0.2.0 (2025-01-18)
+
+### Feature
+
+* feat: add virt libraries (#19)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`9e7650f`](https://github.com/butler54/bootc-homelab-rhel/commit/9e7650f819f4a99905eea7a8c7a1a869d95961fb))
+
+### Fix
+
+* fix: correct pipeline syntax (#20)
+
+* fix: correct pipeline syntax
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: correct syntax
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+---------
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`597b223`](https://github.com/butler54/bootc-homelab-rhel/commit/597b223fa43d64b5beedc59dc49499793ee6b7d4))
+
+* fix: correct image pipeline signing (#15)
+
+* fix: correct image pipeline signing
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: add NM files but dont do anything with them yet
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: add missing file
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+---------
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`eb4ebfe`](https://github.com/butler54/bootc-homelab-rhel/commit/eb4ebfe091c3e7736e3af372f54326be5b6cf8c0))
+
 ## v0.1.12 (2025-01-13)
 
 ### Fix
