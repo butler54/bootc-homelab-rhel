@@ -25,6 +25,7 @@ RUN dnf -y install wget \
     tmux \
     tailscale 
 
+RUN dnf -y install usbutils
 
 ADD files/sudoers.d/wheel-passwordless-sudo /etc/sudoers.d/
 ADD files/chrony.conf /etc/
