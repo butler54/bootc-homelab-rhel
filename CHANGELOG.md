@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.2.2 (2025-01-19)
+
+### Fix
+
+* fix: remove cockpit machines due to motd issues (#22)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`93970c6`](https://github.com/butler54/bootc-homelab-rhel/commit/93970c610543bbdfbb7eb40e04fc153320230c57))
+
 ## v0.2.1 (2025-01-19)
 
 ### Fix
