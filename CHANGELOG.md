@@ -1,5 +1,43 @@
 # CHANGELOG
 
+## v0.2.1 (2025-01-19)
+
+### Fix
+
+* fix: revert to tag (#21)
+
+* fix: revert to tag
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: correct behaviour
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: correct behaviour
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: add cockpit machines explicitly
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: correct dumb errors
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: actually commit
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: remove systemctl call
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+---------
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`08a8e35`](https://github.com/butler54/bootc-homelab-rhel/commit/08a8e35f5e0eda610e246bd15e53c1e59a6e0299))
+
 ## v0.2.0 (2025-01-18)
 
 ### Feature
