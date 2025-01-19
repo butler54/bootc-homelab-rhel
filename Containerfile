@@ -34,8 +34,6 @@ ADD files/chrony.conf /etc/
 # RUN chmod 600 /etc/NetworkManager/system-connections/br0.nmconnection
 # RUN chmod 600 /etc/NetworkManager/system-connections/eno1.nmconnection
 
-RUN virtsh
-
 RUN mkdir -p -m 777 /var/mnt/vms
 
 
