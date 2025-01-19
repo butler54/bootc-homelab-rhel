@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.2.3 (2025-01-19)
+
+### Fix
+
+* fix: USB utils (#23)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`60d142b`](https://github.com/butler54/bootc-homelab-rhel/commit/60d142b234b7467696e29fc92ef80ebe2feb8ebb))
+
 ## v0.2.2 (2025-01-19)
 
 ### Fix
