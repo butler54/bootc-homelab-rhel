@@ -37,6 +37,3 @@ ADD files/chrony.conf /etc/
 RUN mkdir -p -m 777 /var/mnt/vms
 
 
-RUN sudo systemctl enable --now tailscaled
-
-
