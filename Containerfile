@@ -19,13 +19,12 @@ RUN dnf -y install wget \
     libvirt-client \
     virt-who \
     virt-top \
+    virt-viewer \
     openssh-server \
     git \
     lm_sensors \ 
     tmux \
     tailscale 
-
-RUN dnf group install -y "Virtualization Host"
 
 
 ADD files/sudoers.d/wheel-passwordless-sudo /etc/sudoers.d/
