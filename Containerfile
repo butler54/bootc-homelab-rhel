@@ -8,7 +8,6 @@ RUN dnf -y install wget \
     vim-enhanced \
     firewalld \
     cockpit* \
-    cockpit-machines \
     podman \
     buildah \
     skopeo \
