@@ -10,23 +10,41 @@ env:
   IMAGE: bootc-lab
 jobs:
   buildlatest:
-    runs-on: self-hosted
+    name: Build Bootc image with repo access
 
+    runs-on: ubuntu-latest
+    container:
+      image: registry.access.redhat.com/ubi9/ubi
+      options: --privileged    
     permissions:
-      contents: read
+      contents: write
       packages: write
       id-token: write
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-
-
+    - name: Get container tools in UBI builder
+      run: dnf -y install podman buildah skopeo
+    - name: Access a subscription via activation key
+      env:
+        SMDEV_CONTAINER_OFF: 1
+        orgid: ${{ secrets.RHT_ORGID }}
+        activation_key: ${{ secrets.RHT_ACT_KEY }}
+      run: subscription-manager register --org=$orgid --activationkey=$activation_key
+    - name: Workaround open podman-login action issue
+      env:
+        auth: "{ \"auths\": {} }"
+      run: |
+        mkdir -p $HOME/.docker
+        echo $auth > $HOME/.docker/config.json
+  
     - name: Log in to Quay.io
       uses: redhat-actions/podman-login@v1
       with:
         username: ${{ env.REGISTRY_USER }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
         registry: ${{ env.IMAGE_REGISTRY }}
+        auth_file_path: /run/containers/0/auth.json
 
     - name: Log in to registry.redhat.io
       uses: redhat-actions/podman-login@v1
@@ -34,7 +52,7 @@ jobs:
         username: ${{ secrets.RH_REGISTRY_USER }} # service account
         password: ${{ secrets.RH_REGISTRY_PASSWORD }} # service accounts
         registry: registry.redhat.io
-
+        auth_file_path: /run/containers/0/auth.json
 
     - name: Build Image
       id: build-image
@@ -44,3 +62,7 @@ jobs:
         tags: latest ${{ github.sha }}
         containerfiles: |
          ./Containerfile
+    - name: Clean up the subscription
+      env:
+        SMDEV_CONTAINER_OFF: 1
+      run: subscription-manager unregister
