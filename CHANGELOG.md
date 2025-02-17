@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## v0.2.4 (2025-02-17)
+
+### Fix
+
+* fix: test subscription manager registration (#24)
+
+* fix: test subscription manager registration
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: add build process
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+---------
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`f2941b0`](https://github.com/butler54/bootc-homelab-rhel/commit/f2941b0d43e1a447c4d50e3584ea3dc1b0a0b84c))
+
 ## v0.2.3 (2025-01-19)
 
 ### Fix
