@@ -2,8 +2,6 @@ FROM registry.redhat.io/rhel9/rhel-bootc:latest
 
 RUN dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/9/tailscale.repo
 
-RUN dnf update -y
-
 RUN dnf -y install wget \
     vim-enhanced \
     firewalld \
@@ -35,5 +33,7 @@ ADD files/chrony.conf /etc/
 # RUN chmod 600 /etc/NetworkManager/system-connections/eno1.nmconnection
 
 RUN mkdir -p -m 777 /var/mnt/vms
+
+RUN bootc container lint
 
 
