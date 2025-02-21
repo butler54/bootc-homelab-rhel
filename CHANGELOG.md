@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## v0.2.5 (2025-02-21)
+
+### Fix
+
+* fix: add automatic updater (#25)
+
+* fix: add automatic updater
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: auto-updater
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+---------
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`a3e3d8c`](https://github.com/butler54/bootc-homelab-rhel/commit/a3e3d8c47a7ae01fd8be927973aa977b0c98c9af))
+
 ## v0.2.4 (2025-02-17)
 
 ### Fix
