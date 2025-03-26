@@ -3,7 +3,7 @@
 name: Weekly bounce
 on:
   schedule:
-    - cron: '0 0 0 * *' # runs weekly
+    - cron: '0 0 * * 0'
 
 env:
   REGISTRY_USER: rh-ee-chbutler
