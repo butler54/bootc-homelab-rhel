@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.2.6 (2025-03-26)
+
+### Fix
+
+* fix: correct build process (#26)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`21a9472`](https://github.com/butler54/bootc-homelab-rhel/commit/21a947203fa95216c1d3bc573de4749a7dc6f86a))
+
 ## v0.2.5 (2025-02-21)
 
 ### Fix
