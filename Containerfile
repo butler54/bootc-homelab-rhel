@@ -21,7 +21,8 @@ RUN dnf -y install wget \
     git \
     lm_sensors \ 
     tmux \
-    tailscale 
+    tailscale \
+    make
 
 RUN dnf -y install usbutils
 
@@ -32,6 +33,7 @@ ADD files/chrony.conf /etc/
 # RUN chmod 600 /etc/NetworkManager/system-connections/br0.nmconnection
 # RUN chmod 600 /etc/NetworkManager/system-connections/eno1.nmconnection
 
+RUN ln -s /lib/systemd/system/tailscaled.service /etc/systemd/system/multi-user.target.wants/tailscaled.service
 RUN mkdir -p -m 777 /var/mnt/vms
 
 RUN bootc container lint
