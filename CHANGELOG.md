@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.3.0 (2025-03-29)
+
+### Feature
+
+* feat: add xfsdump (#28)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`1f9e2c1`](https://github.com/butler54/bootc-homelab-rhel/commit/1f9e2c1379a33864f5f0f3fe142753879eabc1e2))
+
 ## v0.2.7 (2025-03-29)
 
 ### Fix
