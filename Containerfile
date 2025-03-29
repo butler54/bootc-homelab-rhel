@@ -22,7 +22,8 @@ RUN dnf -y install wget \
     lm_sensors \ 
     tmux \
     tailscale \
-    make
+    make \
+    xfsdump
 
 RUN dnf -y install usbutils
 
