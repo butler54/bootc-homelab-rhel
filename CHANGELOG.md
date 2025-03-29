@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.2.7 (2025-03-29)
+
+### Fix
+
+* fix: add make enforce tailscaled (#27)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`178caaf`](https://github.com/butler54/bootc-homelab-rhel/commit/178caafd15941adb556cf6a3b8418c52fd7b71e8))
+
 ## v0.2.6 (2025-03-26)
 
 ### Fix
