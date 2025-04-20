@@ -71,7 +71,9 @@ jobs:
         password: ${{ secrets.RH_REGISTRY_PASSWORD }} # service accounts
         registry: registry.redhat.io
         auth_file_path: /run/containers/0/auth.json
-
+    - name: Pull deps
+      run: make get-deps
+      
     - name: Build Image
       id: build-image
       uses: redhat-actions/buildah-build@v2

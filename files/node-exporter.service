@@ -1,0 +1,10 @@
+[Unit]
+Description=Node Exporter
+After=network.target
+[Service]
+User=nodexp
+Group=nodexp
+Type=simple
+ExecStart=/usr/local/bin/node_exporter
+[Install]
+WantedBy=multi-user.target
