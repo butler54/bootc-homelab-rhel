@@ -41,7 +41,7 @@ jobs:
         ref: ${{ steps.get_latest_tag.outputs.LATEST_TAG }}
         
     - name: Get container tools in UBI builder
-      run: dnf -y install podman buildah skopeo
+      run: dnf -y install podman buildah skopeo make
     - name: Access a subscription via activation key
       env:
         SMDEV_CONTAINER_OFF: 1
@@ -73,7 +73,7 @@ jobs:
         auth_file_path: /run/containers/0/auth.json
     - name: Pull deps
       run: make get-deps
-      
+
     - name: Build Image
       id: build-image
       uses: redhat-actions/buildah-build@v2
