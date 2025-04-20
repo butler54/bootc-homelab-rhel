@@ -41,7 +41,7 @@ jobs:
         ref: ${{ steps.get_latest_tag.outputs.LATEST_TAG }}
         
     - name: Get container tools in UBI builder
-      run: dnf -y install podman buildah skopeo make
+      run: dnf -y install podman buildah skopeo make wget
     - name: Access a subscription via activation key
       env:
         SMDEV_CONTAINER_OFF: 1
