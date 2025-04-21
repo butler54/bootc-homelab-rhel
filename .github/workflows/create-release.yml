@@ -25,7 +25,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
     - name: Get container tools in UBI builder
-      run: dnf -y install podman buildah skopeo
+      run: dnf -y install podman buildah skopeo make wget
     - name: Access a subscription via activation key
       env:
         SMDEV_CONTAINER_OFF: 1
@@ -53,6 +53,10 @@ jobs:
         password: ${{ secrets.RH_REGISTRY_PASSWORD }} # service accounts
         registry: registry.redhat.io
         auth_file_path: /run/containers/0/auth.json
+
+    - name: Pull deps
+      run: make get-deps
+
     - name: Build Image
       uses: redhat-actions/buildah-build@v2
       with:
