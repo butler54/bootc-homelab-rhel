@@ -1,5 +1,31 @@
 # CHANGELOG
 
+## v0.4.0 (2025-04-21)
+
+### Feature
+
+* feat: add node exporter and service (#29)
+
+* feat: add node exporter and service
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: correct build
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* chore: add wget to build
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* fix: correct tar syntax
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+---------
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`a7d7574`](https://github.com/butler54/bootc-homelab-rhel/commit/a7d75748d092f2e46cd9f9a85a8a69a3708d6b61))
+
 ## v0.3.0 (2025-03-29)
 
 ### Feature
