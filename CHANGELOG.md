@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.5.1 (2025-04-22)
+
+### Fix
+
+* fix: correct copy and paste errors (#31)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`ba93961`](https://github.com/butler54/bootc-homelab-rhel/commit/ba93961d046a7a98bd3ea0981059268cd3a59684))
+
 ## v0.5.0 (2025-04-22)
 
 ### Feature
