@@ -1,0 +1,13 @@
+[Unit]
+Description=VictoriaMetrics Agent
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/vmagent \
+  -promscrape.config=/etc/vmagent/scrape.yml \
+  -remoteWrite.url=https://ingest-vm.apps.ocp.thebutlers.me/api/v1/write
+Restart=on-failure
+User=vmagent
+
+[Install]
+WantedBy=multi-user.target
