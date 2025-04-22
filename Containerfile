@@ -37,12 +37,27 @@ ADD files/chrony.conf /etc/
 RUN ln -s /lib/systemd/system/tailscaled.service /etc/systemd/system/multi-user.target.wants/tailscaled.service
 RUN mkdir -p -m 777 /var/mnt/vms
 
+
 COPY files/node-sysuser.conf /usr/lib/sysusers.d/
 
 COPY node_exporter /usr/local/bin/node_exporter
+RUN chmod +x /usr/local/bin/node_exporter
 
 COPY files/node-exporter.service /etc/systemd/system/node-exporter.service
 RUN ln -s /etc/systemd/system/node-exporter.service /etc/systemd/system/multi-user.target.wants/node-exporter.service
+
+
+COPY files/vmagent-sysuser.conf /usr/lib/sysusers.d/
+
+COPY vmagent /usr/local/bin/vmagent
+RUN chmod +x /usr/local/bin/vmagent
+
+RUN mkdir -p /etc/vmagent
+COPY files/vmagent-scrape.yml /etc/vmagent/scrape.yml
+
+COPY files/vmagent.service /etc/systemd/system/vmagent.service
+RUN ln -s /etc/systemd/system/vmagent.service /etc/systemd/system/multi-user.target.wants/vmagent.service
+
 
 
 RUN bootc container lint
