@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## v0.5.0 (2025-04-22)
+
+### Feature
+
+* feat: add vmagent configuration (#30)
+
+* feat: add vmagent configuration
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+* Fix: clean scrape config
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt;
+
+---------
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`5167cf5`](https://github.com/butler54/bootc-homelab-rhel/commit/5167cf5e659ff064248f0953bf71b3fb635c39eb))
+
 ## v0.4.0 (2025-04-21)
 
 ### Feature
