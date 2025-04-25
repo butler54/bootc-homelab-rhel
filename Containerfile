@@ -23,7 +23,9 @@ RUN dnf -y install wget \
     tmux \
     tailscale \
     make \
-    xfsdump
+    xfsdump \
+    smartmontools \
+    fio 
 
 RUN dnf -y install usbutils
 
