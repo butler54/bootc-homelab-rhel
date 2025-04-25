@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.6.0 (2025-04-25)
+
+### Feature
+
+* feat: io tools (#32)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`ac1ca36`](https://github.com/butler54/bootc-homelab-rhel/commit/ac1ca36a3404ac43c0d63fc47f53fa1c8dd618db))
+
 ## v0.5.1 (2025-04-22)
 
 ### Fix
