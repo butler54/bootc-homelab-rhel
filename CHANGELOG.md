@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v0.6.1 (2025-08-03)
+
+### Fix
+
+* fix: ensure weekly bounce happens correctly (#33)
+
+Signed-off-by: Chris Butler &lt;chris.butler@redhat.com&gt; ([`6177c03`](https://github.com/butler54/bootc-homelab-rhel/commit/6177c03a555123adcc619225f87a3a2142965ac9))
+
 ## v0.6.0 (2025-04-25)
 
 ### Feature
