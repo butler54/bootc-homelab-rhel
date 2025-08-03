@@ -21,10 +21,11 @@ jobs:
       packages: write
       id-token: write
     steps:
+    - name: Get container tools in UBI builder
+      run: dnf -y install podman buildah skopeo make wget git
     - name: Checkout repository
       uses: actions/checkout@v4
-    - name: Get container tools in UBI builder
-      run: dnf -y install podman buildah skopeo make wget
+
     - name: Access a subscription via activation key
       env:
         SMDEV_CONTAINER_OFF: 1
